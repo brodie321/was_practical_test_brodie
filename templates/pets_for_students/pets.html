@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
 <html>
     <head>
         <title>Pets</title>
     </head>
     <body>
-
-        <h1>TEST</h1>
+        <img src="{% static 'images/cats_with_fire.jpg' %}"
+            alt="Picture of cats with fire" />
+        <h1>All the cats are:</h1>
         <div>
             Click to go back to <a href="/pets_for_students/">Home</a><br />
         </div>
