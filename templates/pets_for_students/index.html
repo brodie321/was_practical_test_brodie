@@ -10,6 +10,29 @@
         <img src="{% static 'images/cat.png' %}"
             alt="Picture of cats with fire" />
         <h1>The Students and their cats are:</h1>
+
+        <div>
+            {% if students %}
+                <ul>
+                    {% for student in students %}
+                        <li>{{ student.firstname }} has these cats:
+                            <ul>
+                                {% for cat in cats %}
+                                    {% if cat.student == student %}
+                                        <li>{{ cat.name }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <strong>There are no students present.</strong>
+            {% endif %}
+        </div>
+
+
         <div>
             <a href="/pets_for_students/pets">About Pets of Students</a><br />
         </div>
