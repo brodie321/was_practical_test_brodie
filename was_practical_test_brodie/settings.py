@@ -27,7 +27,8 @@ SECRET_KEY = '_$*2g*!if2i$%06w($i7(!^wd3)2xj1&l&39(2)xg2o=lc^8(h'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['brodiestone.pythonanywhere.com']
+ALLOWED_HOSTS = ['brodiestone.pythonanywhere.com',
+                 '127.0.0.1']
 
 
 # Application definition

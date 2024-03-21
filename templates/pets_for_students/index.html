@@ -15,7 +15,7 @@
             {% if students %}
                 <ul>
                     {% for student in students %}
-                        <li>{{ student.firstname }} has these cats:
+                        <li>{{ student.firstname }} {{ student.lastname }} has these cats:
                             <ul>
                                 {% for cat in cats %}
                                     {% if cat.student == student %}
