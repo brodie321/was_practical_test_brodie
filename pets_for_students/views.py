@@ -13,6 +13,8 @@ def index(request):
     context_dict = {}
     context_dict['cats'] = cats_list
     context_dict['students'] = students_list
+    context_dict['catsWord'] = "cats"
+    context_dict['catWord'] = "cat"
 
     return render(request, 'pets_for_students/index.html', context=context_dict )
 

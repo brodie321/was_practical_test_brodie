@@ -15,7 +15,15 @@
             {% if students %}
                 <ul>
                     {% for student in students %}
-                        <li>{{ student.firstname }} {{ student.lastname }} has <strong>{{ student.noOfCats }}</strong> cats:
+
+                        <li>{{ student.firstname }} {{ student.lastname }} has <strong>{{ student.noOfCats }}</strong>
+                            {% if student.noOfCats == 1 %}
+                            {{ catWord }}
+                            {% else %}
+                            {{ catsWord }}
+                            {% endif %}
+
+                            </li>
                             <ul>
                                 {% for cat in cats %}
                                     {% if cat.student == student %}
